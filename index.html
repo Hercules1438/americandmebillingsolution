@@ -3,48 +3,148 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>American DME Billing Solution</title>
+  <title>American DME Billing Solution | Healthcare RCM Services</title>
   <style>
+    :root {
+      --primary: #1d4ed8;
+      --primary-dark: #1e40af;
+      --dark: #0f172a;
+      --light-bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text-muted: #64748b;
+      --text-main: #334155;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f8fafc;
-      color: #1e293b;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text-main);
+      background-color: var(--light-bg);
+    }
+    header {
+      background-color: #ffffff;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 1rem 2rem;
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      min-height: 100vh;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
-    .card {
-      background: #ffffff;
-      padding: 2.5rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-      max-width: 500px;
+    .brand { font-weight: 700; font-size: 1.25rem; color: var(--dark); }
+    .hero {
       text-align: center;
-      margin: 1rem;
+      padding: 4rem 1.5rem 3rem;
+      max-width: 800px;
+      margin: 0 auto;
     }
-    h1 { color: #0f172a; margin-bottom: 0.5rem; }
-    p { line-height: 1.6; color: #475569; }
+    .hero h1 {
+      font-size: 2.5rem;
+      color: var(--dark);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    .hero p { font-size: 1.15rem; color: var(--text-muted); margin-bottom: 2rem; }
     .btn {
       display: inline-block;
-      margin-top: 1.5rem;
-      padding: 0.75rem 1.5rem;
-      background-color: #2563eb;
-      color: white;
+      padding: 0.85rem 1.75rem;
+      background-color: var(--primary);
+      color: #ffffff;
       text-decoration: none;
       border-radius: 6px;
       font-weight: 600;
+      transition: background-color 0.2s ease;
     }
-    .btn:hover { background-color: #1d4ed8; }
+    .btn:hover { background-color: var(--primary-dark); }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      max-width: 1000px;
+      margin: 0 auto 4rem;
+      padding: 0 1.5rem;
+    }
+    .card {
+      background: var(--card-bg);
+      padding: 1.75rem;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+    }
+    .card h3 { color: var(--dark); margin-bottom: 0.5rem; }
+    .card p { font-size: 0.95rem; color: var(--text-muted); }
+    .contact-section {
+      background-color: #ffffff;
+      border-top: 1px solid #e2e8f0;
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+    .contact-section h2 { color: var(--dark); margin-bottom: 0.5rem; }
+    .contact-section p { color: var(--text-muted); margin-bottom: 1.5rem; }
+    .contact-details {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      font-size: 1.05rem;
+    }
+    .contact-details a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .contact-details a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>American DME Billing Solution</h1>
-    <p>Professional Revenue Cycle Management and Healthcare Billing Services tailored for Durable Medical Equipment providers.</p>
-    <a href="mailto:contact@yourdomain.com" class="btn">Get in Touch</a>
-  </div>
+
+  <header>
+    <div class="brand">American DME Billing Solution</div>
+    <a href="#contact" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Contact Us</a>
+  </header>
+
+  <section class="hero">
+    <h1>End-to-End DME Revenue Cycle Management</h1>
+    <p>Streamlining claims processing, denial management, and prior authorizations for US Durable Medical Equipment providers.</p>
+    <a href="mailto:AmericanDMEbillingsolutions@proton.me" class="btn">Schedule a Consultation</a>
+  </section>
+
+  <section class="services">
+    <div class="card">
+      <h3>Intake & Eligibility</h3>
+      <p>Thorough insurance verification, document collection, and strict prior authorization checks to prevent front-end denials.</p>
+    </div>
+    <div class="card">
+      <h3>Claims Submission</h3>
+      <p>Clean electronic claim generation, accurate HCPCS/modifier coding, and timely transmission via major clearinghouses.</p>
+    </div>
+    <div class="card">
+      <h3>Denial & AR Recovery</h3>
+      <p>Proactive aging account resolution, detailed appeals, and rapid payment posting from Electronic Remittance Advices (ERAs).</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <h2>Ready to optimize your billing workflows?</h2>
+    <p>Get in touch to discuss backend administrative support tailored to your DME business.</p>
+    <div class="contact-details">
+      <div><strong>Email:</strong> <a href="mailto:AmericanDMEbillingsolutions@proton.me">AmericanDMEbillingsolutions@proton.me</a></div>
+      <div><strong>Phone:</strong> <a href="tel:+18182549621">(818) 254-9621</a></div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2026 American DME Billing Solution. All rights reserved.
+  </footer>
+
 </body>
 </html>
